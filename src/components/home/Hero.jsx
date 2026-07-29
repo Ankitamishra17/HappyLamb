@@ -56,8 +56,7 @@ export default function Hero() {
 
   return (
     <section
-      id="home"
-      className="relative w-full overflow-hidden"
+      className="relative flex min-h-[90vh] lg:min-h-screen w-full items-center overflow-hidden py-16 md:py-20 lg:py-24 text-white"
       style={{ backgroundColor: "#090909" }}
     >
       {/* Background slideshow */}

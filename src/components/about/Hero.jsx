@@ -89,25 +89,31 @@ const FilmstripTicker = () => {
 
 export default function AboutHero() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#090909] text-[#C9C9C9]">
+    <section className="relative flex min-h-[90vh] lg:min-h-screen w-full items-center overflow-hidden py-16 md:py-20 lg:py-24 text-white">
       {/* Background image layer with a rich-black vignette for legibility */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 overflow-hidden">
         {/* Mobile-only background image */}
-        <img
+        <motion.img
           src={HERO_BG_IMAGE_MOBILE}
           alt="Film production camera background"
-          className="block h-full w-full scale-105 object-cover object-center sm:hidden"
+          className="block h-full w-full object-cover object-center sm:hidden"
+          initial={{ scale: 1 }}
+          animate={{ scale: 1.15 }}
+          transition={{ duration: 12, ease: "easeOut" }}
         />
         {/* Tablet/desktop background image */}
-        <img
+        <motion.img
           src={HERO_BG_IMAGE}
           alt="Film production camera background"
-          className="hidden h-full w-full scale-105 object-cover object-center sm:block"
+          className="hidden h-full w-full object-cover object-center sm:block"
+          initial={{ scale: 1 }}
+          animate={{ scale: 1.15 }}
+          transition={{ duration: 12, ease: "easeOut" }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#090909] via-[#090909]/70 to-[#090909]/30" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 pt-16 pb-24 ">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 -pt-4 pb-14 ">
         {/* Main Grid Section */}
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-12">
           {/* Left Column — Manifesto & Typography */}
@@ -150,7 +156,7 @@ export default function AboutHero() {
               digital content that brings brands to life.
             </motion.p>
 
-            <Link to="/about">
+            <Link to="/work">
               <motion.button
                 type="button"
                 initial={{ opacity: 0, y: 20 }}
@@ -160,15 +166,15 @@ export default function AboutHero() {
                 whileTap={{ scale: 0.97 }}
                 className="group inline-flex items-center gap-3 border border-[#2A2A2A] bg-[#141414] px-7 py-3.5 font-['Poppins'] text-xs font-bold uppercase tracking-widest text-white transition-colors duration-300 hover:border-[#FF6B1A] hover:bg-[#FF6B1A] hover:text-[#0A0A0A]"
               >
-                <span className="flex h-8 w-8 items-center justify-center bg-[#FB5406] text-[#0A0A0A] transition-colors duration-300 group-hover:bg-[#0A0A0A] group-hover:text-[#FF6B1A]">
+                <span className="flex h-7 w-7 items-center justify-center bg-[#FB5406] text-[#0A0A0A] transition-colors duration-300 group-hover:bg-[#0A0A0A] group-hover:text-[#FF6B1A]">
                   <Play
-                    size={13}
+                    size={10}
                     fill="currentColor"
                     className="translate-x-0.5"
                   />
                 </span>
 
-                <span>Watch Our Story</span>
+                <span>Watch Our Work</span>
               </motion.button>
             </Link>
           </div>

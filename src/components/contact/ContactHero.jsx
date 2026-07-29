@@ -18,21 +18,45 @@ const BODY = "#C9C9C9";
 const MUTED = "#8D8D8D";
 const HOVER = "#FF6B1A";
 
-// Cinema studio background image from Unsplash
+// Cinema studio background images
+// Desktop/tablet keeps the existing crop; mobile gets its own image so key
+// detail isn't lost or oddly cropped on narrow screens.
 const BG_IMAGE = "12.png";
+const BG_IMAGE_MOBILE = "18.png"; // <-- swap to your actual mobile image filename
+
+// Slow, continuous Ken Burns-style zoom — starts slightly zoomed in and
+// drifts further in over a long duration, looping smoothly back and forth.
+const zoomAnimation = {
+  scale: [1.05, 1.15, 1.05],
+};
+const zoomTransition = {
+  duration: 18,
+  ease: "easeInOut",
+  repeat: Infinity,
+};
 
 export default function ContactHero() {
   return (
     <section
-      className="relative flex min-h-[92vh] w-full items-center overflow-hidden px-6 lg:px-24 py-20 text-white"
-      style={{ backgroundColor: BACKGROUND }}
+className="relative flex min-h-[90vh] lg:min-h-screen w-full items-center overflow-hidden py-16 md:py-20 lg:py-24 text-white"      style={{ backgroundColor: BACKGROUND }}
     >
       {/* Background Image Layer */}
-      <div className="absolute inset-0 z-0">
-        <img
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {/* Mobile-only background image */}
+        <motion.img
+          src={BG_IMAGE_MOBILE}
+          alt="Film set camera background"
+          className="block h-full w-full object-cover object-center sm:hidden"
+          animate={zoomAnimation}
+          transition={zoomTransition}
+        />
+        {/* Tablet/desktop background image */}
+        <motion.img
           src={BG_IMAGE}
           alt="Film set camera background"
-          className="h-full w-full object-cover object-center scale-105"
+          className="hidden h-full w-full object-cover object-center sm:block"
+          animate={zoomAnimation}
+          transition={zoomTransition}
         />
       </div>
       <div
@@ -88,7 +112,7 @@ export default function ContactHero() {
                   Email Us
                 </p>
                 <p className="text-xs font-heading  text-white">
-                 dilip@happylamb.co.in
+                  dilip@happylamb.co.in
                 </p>
               </div>
             </div>

@@ -38,7 +38,7 @@ const STATS = [
 export default function TeamHero() {
   return (
     <section
-      className="relative flex min-h-[92vh] w-full items-center overflow-hidden px-6 lg:px-[96px] py-20 text-white"
+      className="relative flex min-h-[90vh] lg:min-h-screen w-full items-center overflow-hidden py-16 md:py-20 lg:py-24 text-white"
       style={{ backgroundColor: DARK_PALETTE.BG, fontFamily: FONTS.body }}
     >
       <link
@@ -47,13 +47,15 @@ export default function TeamHero() {
       />
 
       {/* Background Image Layer with Layered Vignette */}
-      <div className="absolute inset-0 z-0">
-        <img
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <motion.img
           src={BG_IMAGE}
           alt="Production crew on set background"
-          className="h-full w-full object-cover object-center scale-105"
+          className="h-full w-full object-cover object-center"
+          initial={{ scale: 1 }}
+          animate={{ scale: 1.15 }}
+          transition={{ duration: 12, ease: "easeOut" }}
         />
-      
       </div>
 
       <div className="relative z-10 mx-auto grid w-full max-w-7xl px-6 sm:px-8 lg:px-12 grid-cols-1 items-center gap-16 lg:grid-cols-12">
