@@ -2,8 +2,6 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Sparkles, Play } from "lucide-react";
 import { Link } from "react-router-dom";
 
-
-
 /**
  * Studio brand palette
  * Primary      #FB5406  — orange
@@ -28,7 +26,10 @@ const STATS = [
 ];
 
 // High-impact cinema studio visual background
-const HERO_BG_IMAGE = "16.png";
+// Desktop/tablet background stays the existing image; mobile gets its own
+// crop/image so faces or key detail aren't lost on narrow screens.
+const HERO_BG_IMAGE = "Camera 4.png";
+const HERO_BG_IMAGE_MOBILE = "Camera 4.png"; // <-- swap to your actual mobile image filename
 
 // Repeating sprocket-hole filmstrip ticker
 const FilmstripTicker = () => {
@@ -91,10 +92,17 @@ export default function AboutHero() {
     <section className="relative w-full overflow-hidden bg-[#090909] text-[#C9C9C9]">
       {/* Background image layer with a rich-black vignette for legibility */}
       <div className="absolute inset-0 z-0">
+        {/* Mobile-only background image */}
+        <img
+          src={HERO_BG_IMAGE_MOBILE}
+          alt="Film production camera background"
+          className="block h-full w-full scale-105 object-cover object-center sm:hidden"
+        />
+        {/* Tablet/desktop background image */}
         <img
           src={HERO_BG_IMAGE}
           alt="Film production camera background"
-          className="h-full w-full scale-105 object-cover object-center"
+          className="hidden h-full w-full scale-105 object-cover object-center sm:block"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#090909] via-[#090909]/70 to-[#090909]/30" />
       </div>
