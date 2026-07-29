@@ -189,10 +189,10 @@ export default function AboutHero() {
         >
           {STATS.map((stat, idx) => (
             <div key={idx} className="flex flex-col space-y-1">
-              <span className="font-['Bebas_Neue'] text-2xl tracking-tight text-[#FB5406] sm:text-3xl">
+              <span className="font-heading text-2xl tracking-tight text-[#FB5406] sm:text-3xl">
                 {stat.value}
               </span>
-              <span className="font-['Poppins'] text-xs font-semibold uppercase tracking-wider text-[#8D8D8D] sm:text-sm">
+              <span className="font-body text-xs text-nowrap uppercase tracking-wider text-[#8D8D8D] sm:text-sm">
                 {stat.label}
               </span>
             </div>

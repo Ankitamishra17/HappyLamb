@@ -98,7 +98,7 @@ export default function ContactSectionLight() {
   };
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#F4F3F1] px-4 py-16 font-['Poppins'] text-[#4A4A4A] sm:px-6 sm:py-24 lg:px-8">
+    <section className="relative w-full overflow-hidden bg-[#F4F3F1]  py-16 font-['Poppins'] text-[#4A4A4A]">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800&display=swap');
       `}</style>
@@ -131,7 +131,7 @@ export default function ContactSectionLight() {
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 0.2 }}
-                className="font-['Bebas_Neue'] text-3xl uppercase leading-[0.95] tracking-tight text-[#1A1A1A] sm:text-4xl lg:text-5xl"
+                className="font-heading text-3xl uppercase leading-[0.95] tracking-tight text-[#1A1A1A] sm:text-4xl lg:text-5xl"
               >
                 Pitch the project
               </motion.h2>
@@ -391,7 +391,7 @@ export default function ContactSectionLight() {
                 production desk or stop by our studio space.
               </p>
 
-             {/* Contact Links Stack */}
+              {/* Contact Links Stack */}
               <div className="mt-10 space-y-4">
                 {CONTACT_DETAILS.map(({ icon: Icon, label, items }) => (
                   <div
@@ -411,7 +411,7 @@ export default function ContactSectionLight() {
                             <a
                               key={text}
                               href={href}
-                              className="group/link flex min-w-0 items-start justify-between gap-2 text-sm font-semibold text-white transition-colors duration-300 hover:text-[#FF6B1A]"
+                              className="group/link flex min-w-0 items-start justify-between gap-2 text-sm font-body text-white transition-colors duration-300 hover:text-[#FF6B1A]"
                             >
                               <span className="min-w-0 whitespace-pre-line break-words [overflow-wrap:anywhere]">
                                 {text}

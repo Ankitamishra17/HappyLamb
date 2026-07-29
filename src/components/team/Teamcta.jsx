@@ -23,7 +23,7 @@ const FONTS = {
 export default function TeamCTA() {
   return (
     <section
-      className="relative w-full overflow-hidden py-14 sm:py-20 px-6 sm:px-10 lg:px-16 border-t"
+      className="relative w-full overflow-hidden py-14 sm:py-20  border-t"
       style={{ backgroundColor: DARK_PALETTE.BG, borderColor: DARK_PALETTE.BORDER, fontFamily: FONTS.body }}
     >
       <link

@@ -51,7 +51,7 @@ export default function ContactMap() {
   };
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#090909] px-4 py-16 font-['Poppins'] text-[#C9C9C9] sm:px-6 sm:py-20 lg:px-16 lg:py-24">
+    <section className="relative w-full overflow-hidden bg-[#090909]  py-16 font-['Poppins'] text-[#C9C9C9]  lg:py-24">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800&display=swap');
       `}</style>

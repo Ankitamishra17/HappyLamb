@@ -121,7 +121,7 @@ export default function TeamCards() {
 
   return (
     <section
-      className="w-full px-4 py-14 sm:py-20 sm:px-6 lg:px-12 lg:py-24 select-none overflow-hidden"
+      className="w-full  py-14 sm:py-20  lg:py-24 select-none overflow-hidden"
       style={{
         backgroundColor: DARK_PALETTE.BG,
         color: DARK_PALETTE.TEXT_PRIMARY,

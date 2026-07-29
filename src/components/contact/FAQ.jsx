@@ -148,7 +148,7 @@ export default function FAQSection() {
 
   return (
     <section
-      className="relative w-full px-4 py-16 sm:py-24 sm:px-8 lg:px-16 overflow-hidden"
+      className="relative w-full py-16 sm:py-24  overflow-hidden"
       style={{ backgroundColor: DARK_PALETTE.BG, fontFamily: FONTS.body }}
     >
       <link

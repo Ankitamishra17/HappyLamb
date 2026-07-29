@@ -421,7 +421,7 @@ export default function WorkGridLight() {
 
   return (
     <section
-      id="featured-grid"
+      
       className="relative w-full overflow-hidden border-t border-b border-[#E4E2DF] bg-[#F4F3F1] py-24 text-[#4A4A4A]"
     >
       <style>{`

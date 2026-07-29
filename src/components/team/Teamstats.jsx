@@ -111,7 +111,7 @@ function StatCard({ stat, index }) {
 export default function TeamStats() {
   return (
     <section
-      className="w-full py-10 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="w-full py-10 sm:py-24  overflow-hidden"
       style={{ backgroundColor: "#FFFFFF", fontFamily: FONTS.body }}
     >
       <link
@@ -120,7 +120,7 @@ export default function TeamStats() {
       />
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Header Section */}
-        <div className="max-w-2xl">
+        <div >
           <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
