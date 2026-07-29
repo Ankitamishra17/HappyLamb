@@ -118,7 +118,7 @@ export default function TeamStats() {
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap"
       />
-      <div className="max-w-7xl mx-auto px-12">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Header Section */}
         <div className="max-w-2xl">
           <motion.h2

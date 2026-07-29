@@ -103,7 +103,7 @@ export default function ContactSectionLight() {
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800&display=swap');
       `}</style>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-12 lg:gap-12">
           {/* ========================================================= */}
           {/* LEFT COLUMN: Main Pitch Form                              */}

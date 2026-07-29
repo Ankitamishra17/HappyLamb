@@ -155,7 +155,7 @@ export default function FAQSection() {
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap"
       />
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
         {/* Header Section */}
         <div className="max-w-2xl">
           <motion.div

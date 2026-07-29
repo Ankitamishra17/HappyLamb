@@ -82,7 +82,7 @@ export default function Process() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-8 mb-16 md:mb-20"
+          className="relative grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 mb-16 md:mb-20"
         >
           {/* connecting line — desktop only */}
           <div
@@ -118,7 +118,7 @@ export default function Process() {
               </h3>
 
               <p
-                className="text-sm leading-relaxed max-w-[220px]"
+                className="text-sm leading-relaxed max-w-full lg:max-w-[220px]"
                 style={{ color: "#5A5A5A", fontFamily: "Poppins, sans-serif" }}
               >
                 {step.desc}
@@ -186,10 +186,7 @@ export default function Process() {
             }
           >
             GET IN TOUCH
-            <span
-              className="w-5 h-5  flex items-center justify-center"
-              style={{ backgroundColor: "#1A1A1A" }}
-            ></span>
+            
           </MotionLink>
         </motion.div>
       </div>

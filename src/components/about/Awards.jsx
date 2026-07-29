@@ -89,7 +89,7 @@ export default function AboutAwardsLight() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] 
        bg-[#FB5406]/10 blur-[180px] pointer-events-none" />
 
-      <div className="mx-auto max-w-7xl px-12 relative z-10">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 relative z-10">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E4E2DF] pb-8">
           <div>

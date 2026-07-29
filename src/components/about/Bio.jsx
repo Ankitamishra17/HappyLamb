@@ -109,7 +109,7 @@ export default function AboutBio() {
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
         {/* SECTION 1: STORY & BIO */}
         <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-12">
           {/* Left Column: Portrait with a timecode ID plate instead of a floating card */}

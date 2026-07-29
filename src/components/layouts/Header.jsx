@@ -104,7 +104,7 @@ export default function Header() {
         }}
       >
         {/* 3-column grid: logo left, nav centered, CTA/toggle right */}
-        <div className="mx-auto grid grid-cols-2 lg:grid-cols-3 items-center max-w-7xl px-12">
+        <div className="mx-auto grid grid-cols-2 lg:grid-cols-3 items-center max-w-7xl px-6 sm:px-8 lg:px-12">
           {/* Logo — left */}
           <Link
             to="/"

@@ -170,7 +170,7 @@ export default function AboutGearDark() {
         }}
       />
 
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 relative z-10">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 relative z-10">
         {/* Header Block */}
         <div
           className="flex flex-col md:flex-row md:items-end justify-between gap-8 pb-8"

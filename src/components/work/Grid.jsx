@@ -430,7 +430,7 @@ export default function WorkGridLight() {
 
       <div className="pointer-events-none absolute top-1/4 right-0 h-96 w-96  bg-[#FB5406]/10 blur-[160px]" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
         {/* Controls Bar */}
         <div className="flex flex-col justify-between gap-6 border-b border-[#E4E2DF] pb-8 lg:flex-row lg:items-center">
           <div className="flex lg:flex-wrap items-center gap-2 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 -mx-6 px-6 sm:-mx-8 sm:px-8 lg:mx-0 lg:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">

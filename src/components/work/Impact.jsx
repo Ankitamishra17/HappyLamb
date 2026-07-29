@@ -88,7 +88,7 @@ export default function WorkImpact() {
 
       <div className="pointer-events-none absolute top-1/2 left-1/3 h-96 w-96 -translate-y-1/2  bg-[#FB5406]/10 blur-[170px]" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
         {/* Header Block */}
         <div className="flex flex-col justify-between gap-6 border-b border-[#E4E2DF] pb-8 md:flex-row md:items-end">
           <div>

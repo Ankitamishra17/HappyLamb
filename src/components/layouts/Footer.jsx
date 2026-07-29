@@ -324,7 +324,7 @@ export default function Footer() {
       </svg>
 
       <motion.div
-        className="mx-auto max-w-7xl px-12 pt-16 pb-10 relative z-10"
+        className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 pt-16 pb-10 relative z-10"
         variants={containerVariants}
         initial="hidden"
         whileInView="show"

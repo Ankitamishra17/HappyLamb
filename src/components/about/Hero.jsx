@@ -99,7 +99,7 @@ export default function AboutHero() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#090909] via-[#090909]/70 to-[#090909]/30" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 pt-16 pb-24 sm:px-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 pt-16 pb-24 ">
         {/* Main Grid Section */}
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-12">
           {/* Left Column — Manifesto & Typography */}

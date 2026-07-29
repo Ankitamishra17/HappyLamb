@@ -60,7 +60,7 @@ export default function WorkGearDark() {
       <div className="absolute top-1/3 left-10 h-96 w-96  bg-amber-500/10 blur-[180px] pointer-events-none" />
       <div className="absolute bottom-10 right-10 h-80 w-80  bg-amber-600/5 blur-[160px] pointer-events-none" />
 
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 relative z-10">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Header Block */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-8">
