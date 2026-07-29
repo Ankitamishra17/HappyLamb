@@ -283,6 +283,9 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const MotionLink = motion(Link);
 
 const fadeUp = {
   hidden: { opacity: 0, y: 26 },
@@ -357,8 +360,8 @@ export default function CTA() {
             variants={fadeUp}
             className="flex flex-wrap items-center justify-center gap-4 mb-14"
           >
-            <motion.a
-              href="#contact"
+            <MotionLink
+              to="/contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.96 }}
               className="inline-flex items-center gap-2 px-8 py-4 text-xs font-semibold tracking-wider "
@@ -376,10 +379,10 @@ export default function CTA() {
             >
               START A PROJECT
               <ArrowRight size={14} />
-            </motion.a>
+            </MotionLink>
 
-            <motion.a
-              href="#work"
+            <MotionLink
+              to="/work"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.96 }}
               className="inline-flex items-center gap-2 px-8 py-4 text-xs font-semibold tracking-wider  border"
@@ -398,7 +401,7 @@ export default function CTA() {
               }}
             >
               VIEW OUR WORK
-            </motion.a>
+            </MotionLink>
           </motion.div>
 
           {/* Direct contact row */}

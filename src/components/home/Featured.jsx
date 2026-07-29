@@ -7,6 +7,9 @@ import {
   useTransform,
   useMotionTemplate,
 } from "framer-motion";
+import { Link } from "react-router-dom";
+
+const MotionLink = motion(Link);
 import {
   ArrowUpRight,
   Play,
@@ -64,7 +67,7 @@ const PROJECTS = [
     thumbnail: "https://img.youtube.com/vi/-ZBTxUT_zAg/hqdefault.jpg",
     videoUrl: "https://youtu.be/-ZBTxUT_zAg",
   },
-   {
+  {
     id: 105,
     title: "Hailstone — Project 5",
     category: "Brand Films",
@@ -219,10 +222,7 @@ function TiltCard({ project }) {
             >
               {String(project.id).slice(-2)}
             </span>
-            <span
-              className="h-1 w-1 "
-              style={{ background: HAIR }}
-            />
+            <span className="h-1 w-1 " style={{ background: HAIR }} />
             <span
               className="text-[10px] uppercase tracking-[0.15em]"
               style={{ fontFamily: FONT_MONO, color: MUTED }}
@@ -549,8 +549,8 @@ export default function FeaturedWork() {
           transition={{ delay: 0.3 }}
           className="mt-16 flex justify-center"
         >
-          <motion.a
-            href="/work"
+          <MotionLink
+            to="/work"
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
             className="group relative inline-flex items-center gap-3 px-10 py-4 text-xs font-bold uppercase tracking-widest transition-colors duration-300"
@@ -562,7 +562,7 @@ export default function FeaturedWork() {
           >
             <span>Explore All Work</span>
             <ArrowUpRight className="h-4 w-4" style={{ color: GOLD }} />
-          </motion.a>
+          </MotionLink>
         </motion.div>
       </div>
     </section>

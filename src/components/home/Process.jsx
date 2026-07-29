@@ -2,6 +2,9 @@
 
 import { motion } from "framer-motion";
 import { Send, Play } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const MotionLink = motion(Link);
 
 const STEPS = [
   {
@@ -165,8 +168,8 @@ export default function Process() {
             </div>
           </div>
 
-          <motion.a
-            href="#contact"
+          <MotionLink
+            href="/contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.96 }}
             className="inline-flex items-center gap-2 px-7 py-3.5 text-xs font-semibold tracking-wider  shrink-0"
@@ -187,9 +190,8 @@ export default function Process() {
               className="w-5 h-5  flex items-center justify-center"
               style={{ backgroundColor: "#1A1A1A" }}
             >
-              <Play size={9} fill="#FFFFFF" color="#FFFFFF" />
             </span>
-          </motion.a>
+          </MotionLink>
         </motion.div>
       </div>
     </section>

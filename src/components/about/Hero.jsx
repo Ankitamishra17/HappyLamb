@@ -1,5 +1,8 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { Sparkles, Play } from "lucide-react";
+import { Link } from "react-router-dom";
+
+
 
 /**
  * Studio brand palette
@@ -61,7 +64,13 @@ const FilmstripTicker = () => {
       />
 
       <div className="relative flex items-center py-3 px-2">
-        <div className={reduceMotion ? "flex" : "flex animate-[hlp-scroll_28s_linear_infinite]"}>
+        <div
+          className={
+            reduceMotion
+              ? "flex"
+              : "flex animate-[hlp-scroll_28s_linear_infinite]"
+          }
+        >
           {row}
           {row}
         </div>
@@ -128,25 +137,32 @@ export default function AboutHero() {
               className="max-w-2xl font-['Poppins'] text-base font-light leading-relaxed text-[#C9C9C9] sm:text-lg"
             >
               Happy Lamb Production is a Mumbai-based creative studio founded by{" "}
-              <span className="font-medium text-white">Dilip Gupta</span>, specializing in
-              commercial films, animation, photography, and digital content that brings
-              brands to life.
+              <span className="font-medium text-white">Dilip Gupta</span>,
+              specializing in commercial films, animation, photography, and
+              digital content that brings brands to life.
             </motion.p>
 
-            <motion.button
-              type="button"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.35 }}
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
-              className="group inline-flex items-center gap-3 border border-[#2A2A2A] bg-[#141414] px-7 py-3.5 font-['Poppins'] text-xs font-bold uppercase tracking-widest text-white transition-colors duration-300 hover:border-[#FF6B1A] hover:bg-[#FF6B1A] hover:text-[#0A0A0A]"
-            >
-              <span className="flex h-8 w-8 items-center justify-center  bg-[#FB5406] text-[#0A0A0A] transition-colors duration-300 group-hover:bg-[#0A0A0A] group-hover:text-[#FF6B1A]">
-                <Play size={13} fill="currentColor" className="translate-x-0.5" />
-              </span>
-              <span>Watch Our Story</span>
-            </motion.button>
+            <Link to="/about">
+              <motion.button
+                type="button"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.35 }}
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className="group inline-flex items-center gap-3 border border-[#2A2A2A] bg-[#141414] px-7 py-3.5 font-['Poppins'] text-xs font-bold uppercase tracking-widest text-white transition-colors duration-300 hover:border-[#FF6B1A] hover:bg-[#FF6B1A] hover:text-[#0A0A0A]"
+              >
+                <span className="flex h-8 w-8 items-center justify-center bg-[#FB5406] text-[#0A0A0A] transition-colors duration-300 group-hover:bg-[#0A0A0A] group-hover:text-[#FF6B1A]">
+                  <Play
+                    size={13}
+                    fill="currentColor"
+                    className="translate-x-0.5"
+                  />
+                </span>
+
+                <span>Watch Our Story</span>
+              </motion.button>
+            </Link>
           </div>
         </div>
 
@@ -169,8 +185,6 @@ export default function AboutHero() {
           ))}
         </motion.div>
       </div>
-
-    
     </section>
   );
 }

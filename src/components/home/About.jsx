@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Clapperboard, Users, Award, PlayCircle, Play } from "lucide-react";
+import { Link } from "react-router-dom";
 
+const MotionLink = motion(Link);
 const STATS = [
   { icon: Clapperboard, value: "250+", label: "PROJECTS", sub: "Completed" },
   { icon: Users, value: "120+", label: "HAPPY CLIENTS", sub: "Worldwide" },
@@ -96,8 +98,8 @@ export default function About() {
                 each brand’s goals.
               </motion.p>
 
-              <motion.a
-                href="#work"
+              <MotionLink
+                to="/about"
                 variants={fadeUp}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.96 }}
@@ -121,7 +123,7 @@ export default function About() {
                 >
                   <Play size={9} fill="#FFFFFF" color="#FFFFFF" />
                 </span>
-              </motion.a>
+              </MotionLink>
             </motion.div>
 
           </div>

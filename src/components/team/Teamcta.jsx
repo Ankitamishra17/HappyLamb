@@ -99,6 +99,9 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight, Phone, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const MotionLink = motion(Link);
 
 const DARK_PALETTE = {
   BG: "#090909",
@@ -165,10 +168,10 @@ export default function TeamCTA() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-10 flex flex-col items-center gap-8"
         >
-          <motion.a
+          <MotionLink
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
-            href="/contact"
+            to="/contact"
             className="group inline-flex items-center gap-3  px-10 py-5 text-sm font-semibold tracking-[0.15em] uppercase transition-shadow shadow-xl shadow-black/20 hover:shadow-2xl hover:shadow-black/40"
             style={{ fontFamily: FONTS.body, backgroundColor: DARK_PALETTE.ORANGE, color: "#0A0A0A" }}
             onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = DARK_PALETTE.ORANGE_HOVER)}
@@ -179,7 +182,7 @@ export default function TeamCTA() {
               size={18}
               className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
             />
-          </motion.a>
+          </MotionLink>
 
           {/* Contact Details */}
           <div
