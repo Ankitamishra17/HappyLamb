@@ -94,7 +94,7 @@ export default function OurClients() {
         style={{ background: "rgba(251,84,6,0.08)" }}
       />
 
-      <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-12 relative z-10">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -80,7 +80,7 @@ export default function Testimonials() {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 py-20 md:py-28">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 md:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Copy column */}
           <motion.div
@@ -181,19 +181,27 @@ export default function Testimonials() {
                         className="text-[11px] tracking-[0.25em]"
                         style={{ color: MUTED, fontFamily: FONT_MONO }}
                       >
-                        {String(pos + 1).padStart(2, "0")} / {String(len).padStart(2, "0")}
+                        {String(pos + 1).padStart(2, "0")} /{" "}
+                        {String(len).padStart(2, "0")}
                       </span>
                     </div>
 
                     <p
                       className="text-lg sm:text-xl md:text-[22px] leading-relaxed"
-                      style={{ color: INK, fontFamily: FONT_BODY, fontWeight: 400 }}
+                      style={{
+                        color: INK,
+                        fontFamily: FONT_BODY,
+                        fontWeight: 400,
+                      }}
                     >
                       {t.quote}
                     </p>
 
                     <div className="flex items-center gap-3">
-                      <span className="h-px w-8" style={{ backgroundColor: ORANGE }} />
+                      <span
+                        className="h-px w-8"
+                        style={{ backgroundColor: ORANGE }}
+                      />
                       <div>
                         <p
                           className="text-sm font-semibold"

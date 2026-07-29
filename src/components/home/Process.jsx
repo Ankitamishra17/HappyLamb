@@ -50,7 +50,7 @@ export default function Process() {
       className="w-full"
       style={{ backgroundColor: "#F4F3F1" }}
     >
-      <div className="max-w-7xl mx-auto px-12 py-16 md:py-24">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 md:py-24">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -189,8 +189,7 @@ export default function Process() {
             <span
               className="w-5 h-5  flex items-center justify-center"
               style={{ backgroundColor: "#1A1A1A" }}
-            >
-            </span>
+            ></span>
           </MotionLink>
         </motion.div>
       </div>

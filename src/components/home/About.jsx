@@ -38,7 +38,7 @@ const containerStagger = {
 
 export default function About() {
   return (
-    <section id="about" className="w-full">
+    <section  className="w-full">
       {/* Light content block */}
       <div className="relative" style={{ backgroundColor: "#F4F3F1" }}>
         {/* Background image */}
@@ -52,7 +52,7 @@ export default function About() {
           <div className="absolute " />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-12 py-16 md:py-24">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 md:py-24">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center -mt-12">
             {/* Left: copy */}
             <motion.div
