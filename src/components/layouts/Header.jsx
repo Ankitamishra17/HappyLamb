@@ -290,7 +290,7 @@ export default function Header() {
               <Link
                 to="/contact"
                 onClick={() => setIsOpen(false)}
-                className="flex items-center gap-2 rounded-sm px-6 py-3 text-[14px] font-semibold tracking-wide"
+                className="flex items-center gap-2  px-6 py-3 text-[14px] font-semibold tracking-wide"
                 style={{ backgroundColor: BRAND.orange, color: BRAND.white }}
               >
                 <span>Let's Talk</span>
