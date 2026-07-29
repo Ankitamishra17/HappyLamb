@@ -238,10 +238,10 @@ export default function Header() {
             <nav className="flex flex-1 flex-col items-center justify-center gap-2 px-8">
               {NAV_LINKS.map((link, idx) => {
                 const isActive = active === link.label;
+
                 return (
-                  <motion.a
+                  <motion.div
                     key={link.label}
-                    href={link.href}
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{
@@ -249,26 +249,31 @@ export default function Header() {
                       duration: 0.4,
                       ease: [0.16, 1, 0.3, 1],
                     }}
-                    onClick={() => setIsOpen(false)}
-                    className="group flex items-center gap-2 py-2.5 text-[26px] font-medium uppercase tracking-wide"
-                    style={{
-                      color: isActive ? BRAND.orange : BRAND.white,
-                      fontFamily: FONT_DISPLAY,
-                    }}
                   >
-                    <span
-                      className="text-[13px]"
+                    <Link
+                      to={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className="group flex items-center gap-2 py-2.5 text-[26px] font-medium uppercase tracking-wide"
                       style={{
-                        color: isActive
-                          ? BRAND.orange
-                          : "rgba(255,255,255,0.35)",
-                        fontFamily: FONT_BODY,
+                        color: isActive ? BRAND.orange : BRAND.white,
+                        fontFamily: FONT_DISPLAY,
                       }}
                     >
-                      {String(idx + 1).padStart(2, "0")}
-                    </span>
-                    {link.label}
-                  </motion.a>
+                      <span
+                        className="text-[13px]"
+                        style={{
+                          color: isActive
+                            ? BRAND.orange
+                            : "rgba(255,255,255,0.35)",
+                          fontFamily: FONT_BODY,
+                        }}
+                      >
+                        {String(idx + 1).padStart(2, "0")}
+                      </span>
+
+                      {link.label}
+                    </Link>
+                  </motion.div>
                 );
               })}
             </nav>

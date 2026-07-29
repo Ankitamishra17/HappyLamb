@@ -3,24 +3,22 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Play, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const SOCIALS = ["Instagram", "Facebook", "YouTube"];
 
 const SLIDES = [
   {
     label: "01",
-    image:
-      "/Camera 3.png",
+    image: "/Camera 3.png",
   },
   {
     label: "02",
-    image:
-      "/Camera 5.png",
+    image: "/Camera 5.png",
   },
   {
     label: "03",
-    image:
-      "/Camera 6.png",
+    image: "/Camera 6.png",
   },
 ];
 
@@ -77,7 +75,6 @@ export default function Hero() {
             className="absolute inset-0 w-full h-full object-cover"
           />
         </AnimatePresence>
-        
       </div>
 
       {/* Hero content */}
@@ -125,54 +122,40 @@ export default function Hero() {
               variants={itemVariants}
               className="flex flex-wrap items-center gap-4 mb-10 md:mb-16"
             >
-              <motion.a
-                href="#work"
+              <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.96 }}
-                className="inline-flex items-center gap-2 px-6 py-3 text-xs font-semibold tracking-wider "
-                style={{
-                  backgroundColor: "#FB5406",
-                  color: "#FFFFFF",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#FF6B1A")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#FB5406")
-                }
               >
-                OUR WORK
-                <motion.span
-                  className="flex"
-                  whileHover={{ x: 3 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 12 }}
+                <Link
+                  to="/work"
+                  className="inline-flex items-center gap-2 px-6 py-3 text-xs font-semibold tracking-wider"
+                  style={{
+                    backgroundColor: "#FB5406",
+                    color: "#FFFFFF",
+                    fontFamily: "Poppins, sans-serif",
+                  }}
                 >
-                  <Play size={12} fill="#FFFFFF" />
-                </motion.span>
-              </motion.a>
+                  OUR WORK
+                 
+                </Link>
+              </motion.div>
 
-              <motion.a
-                href="#contact"
+              <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.96 }}
-                className="inline-flex items-center gap-2 px-6 py-3 text-xs font-semibold tracking-wider  border"
-                style={{
-                  borderColor: "#2A2A2A",
-                  color: "#FFFFFF",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = "#FB5406";
-                  e.currentTarget.style.color = "#FB5406";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = "#2A2A2A";
-                  e.currentTarget.style.color = "#FFFFFF";
-                }}
               >
-                CONTACT US
-              </motion.a>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 px-6 py-3 text-xs font-semibold tracking-wider border"
+                  style={{
+                    borderColor: "#2A2A2A",
+                    color: "#FFFFFF",
+                    fontFamily: "Poppins, sans-serif",
+                  }}
+                >
+                  CONTACT US
+                </Link>
+              </motion.div>
             </motion.div>
 
             {/* Slide indicators — synced with the background slideshow */}
