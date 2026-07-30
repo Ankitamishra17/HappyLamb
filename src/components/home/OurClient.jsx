@@ -155,7 +155,7 @@ export default function OurClients() {
                     transition: "border-color 0.3s ease, box-shadow 0.3s ease",
                   }}
                 >
-                  <span
+                  {/* <span
                     className="absolute top-3 left-3 h-3 w-3 border-l border-t transition-colors duration-300"
                     style={{
                       borderColor: isHovered ? ORANGE : "rgba(0,0,0,0.15)",
@@ -178,7 +178,7 @@ export default function OurClients() {
                     style={{
                       borderColor: isHovered ? ORANGE : "rgba(0,0,0,0.15)",
                     }}
-                  />
+                  /> */}
 
                   <img
                     src={client.src}
